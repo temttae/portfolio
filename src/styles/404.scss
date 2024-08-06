@@ -10,24 +10,21 @@ div {
   font-size: 12.5px;
 }
 
-// p {
-//   background-color: base.$gray-content;
-//   padding: 10px;
-// }
+span {
+  background-color: base.$gray-content;
+  padding: 10px;
+}
 
 a {
   text-decoration: none;
-  // color: base.$gray-content-3;
-  color: base.$gray-content;
+  color: base.$gray-content-3;
 
   &:visited {
-    // color: base.$gray-content-3;
-    color: base.$gray-content;
+    color: base.$gray-content-3;
   }
 
   &:hover {
     text-decoration: underline;
-    cursor: pointer;
   }
 }
 

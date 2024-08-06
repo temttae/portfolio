@@ -36,6 +36,12 @@ body {
   margin: 0;
 }
 
+@media screen and (max-width: 768px) {
+  body {
+    padding: 35px 20px;
+  }
+}
+
 /* images */
 img,
 picture {
