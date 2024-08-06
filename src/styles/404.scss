@@ -1,0 +1,40 @@
+@use 'base';
+
+body {
+  padding: 0;
+}
+
+div {
+  font-family: "IBM Plex Mono", monospace, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12.5px;
+}
+
+// p {
+//   background-color: base.$gray-content;
+//   padding: 10px;
+// }
+
+a {
+  text-decoration: none;
+  // color: base.$gray-content-3;
+  color: base.$gray-content;
+
+  &:visited {
+    // color: base.$gray-content-3;
+    color: base.$gray-content;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.error-container {
+  min-height: 100dvh;
+  // background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGp2aWVpcDE2c2hvM2RxZ2xmODJuaGQ4bWdtZjV3cXdrNjd2Mm81aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/u8AIrgU1H5hjCSwDrX/giphy.gif');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
