@@ -1,0 +1,100 @@
+@use 'base';
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* highlight / selection */
+p,
+a,
+li,
+div,
+br,
+span {
+  &::selection {
+    color: base.$highlight-text;
+    background-color: base.$highlight-bg;
+  }
+}
+
+/* set core defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100dvh;
+  text-rendering: optimizeSpeed;
+  padding: 35px 65px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* images */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* custom classes */
+.name {
+  font-family: "IBM Plex Mono", monospace, Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.name-link {
+  font-size: 28px;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:visited {
+    color: base.$gray-content;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.wavy-link {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: base.$gray-content;
+
+  &:hover {
+    text-decoration-style: wavy;
+  }
+
+  &:visited {
+    color: inherit;
+  }
+}
+
+.gray-link {
+  color: base.$gray-content;
+  text-decoration: none;
+
+  &:visited {
+    color: base.$gray-content;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
