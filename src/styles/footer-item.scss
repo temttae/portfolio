@@ -1,0 +1,38 @@
+@use 'base';
+
+p,
+a {
+  margin: 0;
+}
+
+@mixin flex-col {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.item-container {
+  @include flex-col;
+  gap: 10px;
+}
+
+.item-title {
+  width: 100%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid base.$gray-content;
+}
+
+.item-list {
+  @include flex-col;
+  gap: 10px;
+}
+
+.item-text {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 2px;
+  border-bottom: 1px solid base.$gray-bg;
+}
