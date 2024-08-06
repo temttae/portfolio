@@ -1,0 +1,33 @@
+---
+import "../styles/global.scss";
+import "../styles/about.scss";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="About" description="About Tem Taepaisitphongse.">
+  <div class="about-container">
+    <div class="img-container">
+      <img src="/src/assets/me.jpg" />
+    </div>
+    <div class="text-container">
+      <span>
+        Hello! I'm Tem.
+        <br /><br />
+        I'm from Thailand, currently studying <span class="bold"
+          >CS @ UofM Ann Arbor</span
+        >. I'm interested in creating minimalistic and functional experiences on
+        the web, from design to deployment.
+        <br /><br />
+        Beyond work, you can find me building legos, digging through Letterboxd reviews,
+        and attempting to sight-read piano pieces.
+        <br /><br />
+        You can view my CV <a class="wavy-link" href="/cv">here</a>.
+      </span>
+    </div>
+    <div class="text-container">
+      <span class="back-button">
+        <a href="/">← Home</a>
+      </span>
+    </div>
+  </div>
+</Layout>
