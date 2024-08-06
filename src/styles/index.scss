@@ -1,0 +1,43 @@
+@use 'base';
+
+a {
+  text-decoration: none;
+  color: base.$gray-content;
+
+  &:visited {
+    color: base.$gray-content;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.index-container {
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.about-container {
+  display: grid;
+  column-gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+.about-text {
+  padding-bottom: 20px;
+  border-bottom: 1px solid base.$gray-content;
+}
+
+.works-container {
+  flex: 1;
+}
+
+.footer {}
+
+.bold {
+  font-weight: 700;
+}
