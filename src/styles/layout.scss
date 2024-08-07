@@ -1,11 +1,39 @@
+@use 'base';
+@use 'global';
+
+body {
+  padding: 35px 20px;
+
+  @include global.for-md-up {
+    padding: 35px 65px;
+  }
+}
+
 div {
   font-family: "IBM Plex Mono", monospace, Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 12.5px;
 }
 
+a {
+  text-decoration: none;
+  color: base.$gray-content;
+
+  &:visited {
+    color: base.$gray-content;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .layout-container {
   height: auto;
   min-height: calc(100dvh - 70px);
   overflow-y: scroll;
+
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
 }

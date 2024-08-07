@@ -1,5 +1,11 @@
 @use 'base';
 
+div {
+  font-family: "IBM Plex Mono", monospace, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12.5px;
+}
+
 a {
   text-decoration: none;
   color: base.$gray-content;

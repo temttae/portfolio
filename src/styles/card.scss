@@ -1,29 +1,48 @@
 @use 'base';
 
-a {
-  text-decoration: none;
+div {
+  font-family: "IBM Plex Mono", monospace, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12.5px;
+}
 
-  &:hover {
+.works-container {
+  a {
     text-decoration: none;
+    color: base.$gray-content;
+  
+    &:visited {
+      color: base.$gray-content;
+    }
+  
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
+  
+      .card-container {
+        border: 1px solid base.$highlight-bg;
+        background-color: base.$highlight-text;
+        color: base.$bg;
+      }
+    }
   }
 }
 
 .card-container {
   display: flex;
   flex-direction: column;
-  border: 1px solid base.$gray-content-3;
-  height: fit-content;
-  padding: 10px;
   gap: 10px;
+  padding: 10px;
+  border: 1px solid base.$gray-content-3;
 }
 
-.title-desc {
+.card-title {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.card-title {
+.card-title-text {
   font-size: 14px;
   font-weight: 700;
 }

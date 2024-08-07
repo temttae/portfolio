@@ -1,23 +1,32 @@
 @use 'base';
-
-.content-container {
-  min-height: inherit;
-  display: flex;
-  flex-direction: column;
-  gap: 45px;
-}
+@use 'global';
 
 .title-container {
-  display: grid;
-  column-gap: 24px;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include global.for-lg-up {
+    @include global.infinite-grid-columns(320px);
+  }
 }
 
-@media screen and (max-width: 1024px) {
-  .title-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include global.for-lg-up {
+    @include global.infinite-grid-columns(275px);
+  }
+}
+
+.article-container {
+  flex: 1;
+  margin-top: -25px;
+
+  @include global.for-md-up {
+    margin-top: 0px;
   }
 }
 
@@ -40,8 +49,4 @@
 .github-logo {
   height: 18.5px;
   width: auto;
-}
-
-.article-container {
-  flex: 1;
 }

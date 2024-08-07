@@ -16,6 +16,7 @@ a,
 li,
 div,
 br,
+strong,
 span {
   &::selection {
     color: base.$highlight-text;
@@ -31,15 +32,8 @@ html:focus-within {
 body {
   min-height: 100dvh;
   text-rendering: optimizeSpeed;
-  padding: 35px 65px;
   line-height: 1.5;
   margin: 0;
-}
-
-@media screen and (max-width: 768px) {
-  body {
-    padding: 35px 20px;
-  }
 }
 
 /* images */
@@ -55,6 +49,25 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+/* responsive design mixins */
+@mixin for-md-up {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin for-lg-up {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin infinite-grid-columns($min-width) {
+  display: grid;
+  column-gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(#{$min-width}, 1fr));
 }
 
 /* custom classes */
@@ -81,7 +94,7 @@ select {
 .wavy-link {
   text-decoration: underline;
   text-decoration-style: wavy;
-  text-decoration-color: base.$gray-content;
+  text-decoration-color: base.$gray-content-3;
 
   &:hover {
     text-decoration-style: wavy;
@@ -89,18 +102,5 @@ select {
 
   &:visited {
     color: inherit;
-  }
-}
-
-.gray-link {
-  color: base.$gray-content;
-  text-decoration: none;
-
-  &:visited {
-    color: base.$gray-content;
-  }
-
-  &:hover {
-    text-decoration: none;
   }
 }

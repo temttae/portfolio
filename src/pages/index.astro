@@ -1,42 +1,59 @@
 ---
+import "@fontsource/ibm-plex-mono";
+import "../styles/global.scss";
+import "../styles/layout.scss";
 import "../styles/index.scss";
-import Layout from "../layouts/Layout.astro";
-import InfoFooter from "../layouts/InfoFooter.astro";
+import { ViewTransitions } from "astro:transitions";
 import Card from "../components/Card.astro";
+import Info from "../components/Info.astro";
+import Contact from "../components/Contact.astro";
+import Currently from "../components/Currently.astro";
 ---
 
-<Layout
-  title="Tem Taepaisitphongse"
-  description="Personal site of Tem Taepaisitphongse."
->
-  <div class="index-container">
-    <span class="name">
-      <a class="name-link" href="/">temttae</a>
-    </span>
-    <div class="about-container">
-      <span class="description">
-        Previously a fraud analyst intern at <span class="bold"
-          >Infinitas by Krungthai</span
-        >.
-        <br /><br />
-        <a href="/about">More about me →</a>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Personal site of Tem Taepaisitphongse." />
+    <title>Tem Taepaisitphongse</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <div class="layout-container">
+      <span class="name">
+        <a class="name-link" href="/">temttae</a>
       </span>
-    </div>
-    <div class="works-container">
-      <div class="works">
-        <Card
-          href="/works/sample"
-          title="title"
-          description="description this is very long maybe oh that's not long enough for a test"
-          image_src="/src/assets/me.jpg"
-        />
-        <Card
-          href="/works/sample"
-          title="title"
-          description="description this is very long maybe oh that's not long enough for a test"
-        />
+      <div class="about-container">
+        <span class="description">
+          Previously a fraud analyst intern at <strong
+            >Infinitas by Krungthai</strong
+          >.
+          <br /><br />
+          <a href="/about">More about me →</a>
+        </span>
+      </div>
+      <div class="works-container">
+        <div class="works">
+          <!-- <span
+            >🚧 Under construction! <br />Check again later for <a
+              href="https://github.com/temttae"
+              style={{ textDecoration: "underline" }}>updated projects</a
+            >.</span
+          > -->
+          <Card
+            href="/works/sample"
+            title="Modeling Customer Probability of Fraud"
+            description="This was an intern project at Infinitas for the refinement of the fraud assesment program."
+          />
+        </div>
+      </div>
+      <div class="footer-container">
+        <Info />
+        <Contact />
+        <Currently />
       </div>
     </div>
-    <InfoFooter />
-  </div>
-</Layout>
+  </body>
+</html>

@@ -13,8 +13,8 @@ const { href, title, description, image_src } = Astro.props;
 <a href={href}>
   <div class="card-container">
     <img src={image_src} />
-    <div class="title-desc">
-      <span class="card-title">{title}</span>
+    <div class="card-title">
+      <span class="card-title-text">{title}</span>
       <span>{description}</span>
     </div>
   </div>
