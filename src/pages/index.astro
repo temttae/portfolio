@@ -2,6 +2,7 @@
 import "../styles/index.scss";
 import Layout from "../layouts/Layout.astro";
 import InfoFooter from "../layouts/InfoFooter.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout
@@ -21,7 +22,19 @@ import InfoFooter from "../layouts/InfoFooter.astro";
         <a href="/about">More about me →</a>
       </span>
     </div>
-    <div class="works-container">this is where the work goes</div>
+    <div class="works-container">
+      <div class="works">
+        <Card
+          title="title"
+          description="description this is very long maybe oh that's not long enough for a test"
+          image_src="/src/assets/me.jpg"
+        />
+        <Card
+          title="title"
+          description="description this is very long maybe oh that's not long enough for a test"
+        />
+      </div>
+    </div>
     <InfoFooter />
   </div>
 </Layout>

@@ -33,6 +33,31 @@ a {
 
 .works-container {
   flex: 1;
+  display: grid;
+  column-gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+}
+
+.works {
+  height: fit-content;
+  grid-column: 1 / span 3;
+  display: grid;
+  column-gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .works-container {
+    display: flex;
+  }
+
+  .works {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
 }
 
 .bold {
