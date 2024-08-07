@@ -45,7 +45,25 @@ a {
   border-bottom: 1px solid base.$gray-bg;
 }
 
+.text {
+  display: flex;
+  gap: 4px;
+}
+
 .error {
   color: base.$gray-content-3;
   font-style: italic;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  span:last-of-type {
+    color: base.$gray-content-3;
+  }
 }

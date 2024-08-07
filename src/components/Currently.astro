@@ -1,15 +1,26 @@
 ---
 import "../styles/footer-item.scss";
+import ListeningTo from "./Listening";
+
+const filmData = {
+  title: "Deadpool & Wolverine",
+  link: "https://letterboxd.com/film/deadpool-wolverine/",
+  rating: "★★★½",
+};
 ---
 
 <div class="item-container">
   <span class="title">currently</span>
   <div class="list-text">
+    <ListeningTo client:load />
     <div class="text-container">
-      <span>🎵 If I’m S, Can You Be My N?</span>
-    </div>
-    <div class="text-container">
-      <span>🎬 Good Will Hunting</span>
+      <span class="text">
+        <span>🎬</span>
+        <a href={filmData.link} target="_blank" class="details">
+          <span>{filmData.title}</span>
+          <span>{filmData.rating}</span>
+        </a>
+      </span>
     </div>
   </div>
 </div>
