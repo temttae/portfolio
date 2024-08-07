@@ -3,6 +3,7 @@ import "@fontsource/ibm-plex-mono";
 import "@fontsource-variable/inter";
 import "../styles/global.scss";
 import "../styles/layout.scss";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
@@ -19,6 +20,7 @@ const { title, description } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body>
     <div class="layout-container">

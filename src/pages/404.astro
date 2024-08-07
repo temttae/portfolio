@@ -2,6 +2,7 @@
 import "@fontsource/ibm-plex-mono";
 import "../styles/global.scss";
 import "../styles/404.scss";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <html lang="en">
@@ -12,6 +13,7 @@ import "../styles/404.scss";
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content="404 you're lost." />
     <title>404</title>
+    <ViewTransitions />
   </head>
   <body>
     <div class="error-container">
