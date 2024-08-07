@@ -2,7 +2,11 @@
 import "../styles/footer.scss";
 import "../styles/footer-item.scss";
 
-// const modules = import.meta.glob("/src/data/*.md");
+// const modules = await import.meta.glob("/src/pages/works/*.md");
+// const links = Object.entries(modules).map((elem) => {
+//   return elem;
+// });
+// console.log("links", links);
 ---
 
 <div class="footer-container">
@@ -18,10 +22,9 @@ import "../styles/footer-item.scss";
     <span class="title">projects</span>
     <div class="list-text">
       <div class="text-container">
-        <span><a href="/projectdeets">p1</a></span>
-      </div>
-      <div class="text-container">
-        <span><a href="/projectdeets">p2</a></span>
+        <span>
+          <a href="/works/sample">sample</a>
+        </span>
       </div>
     </div>
   </div>

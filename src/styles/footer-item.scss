@@ -1,5 +1,18 @@
 @use 'base';
 
+a {
+  text-decoration: none;
+  color: base.$gray-content;
+
+  &:visited {
+    color: base.$gray-content;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 @mixin flex-col {
   width: 100%;
   display: flex;

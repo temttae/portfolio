@@ -1,0 +1,47 @@
+@use 'base';
+
+.content-container {
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.title-container {
+  display: grid;
+  column-gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+@media screen and (max-width: 1024px) {
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4px;
+  color: base.$gray-content;
+  padding-bottom: 10px;
+  border-bottom: 1px solid base.$gray-content;
+}
+
+.title-text {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.github-logo {
+  height: 18.5px;
+  width: auto;
+}
+
+.article-container {
+  flex: 1;
+}
