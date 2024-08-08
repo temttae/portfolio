@@ -6,6 +6,7 @@ import "../styles/layout.scss";
 import "../styles/article.scss";
 import "../styles/footer-item.scss";
 import { ViewTransitions } from "astro:transitions";
+import { works } from "../data/works";
 
 const { frontmatter } = Astro.props;
 ---
@@ -57,13 +58,17 @@ const { frontmatter } = Astro.props;
         <div class="item-container">
           <span class="title">works</span>
           <div class="list-text">
-            <div class="text-container">
-              <span
-                ><a href="/works/sample"
-                  >Modeling Probability of Customer Fraud</a
-                ></span
-              >
-            </div>
+            {
+              works.map((work) => {
+                return (
+                  <div class="text-container">
+                    <span>
+                      <a href={work.url}>{work.title}</a>
+                    </span>
+                  </div>
+                );
+              })
+            }
           </div>
         </div>
       </div>

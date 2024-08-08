@@ -3,11 +3,12 @@ import "@fontsource/ibm-plex-mono";
 import "../styles/global.scss";
 import "../styles/layout.scss";
 import "../styles/index.scss";
-import { ViewTransitions } from "astro:transitions";
 import Card from "../components/Card.astro";
 import Info from "../components/Info.astro";
 import Contact from "../components/Contact.astro";
 import Currently from "../components/Currently.astro";
+import { ViewTransitions } from "astro:transitions";
+import { works } from "../data/works";
 ---
 
 <html lang="en">
@@ -36,17 +37,24 @@ import Currently from "../components/Currently.astro";
       </div>
       <div class="works-container">
         <div class="works">
-          <!-- <span
-            >🚧 Under construction! <br />Check again later for <a
-              href="https://github.com/temttae"
-              style={{ textDecoration: "underline" }}>updated projects</a
-            >.</span
-          > -->
-          <Card
-            href="/works/sample"
-            title="Modeling Customer Probability of Fraud"
-            description="This was an intern project at Infinitas for the refinement of the fraud assesment program."
-          />
+          {
+            works.length == 0 ? (
+              <span>
+                🚧 Under construction! <br />
+                Check again later for{" "}
+                <a
+                  href="https://github.com/temttae"
+                  style={{ textDecoration: "underline" }}
+                >
+                  updated projects
+                </a>
+              </span>
+            ) : (
+              works.map((work) => {
+                return <Card work={work} />;
+              })
+            )
+          }
         </div>
       </div>
       <div class="footer-container">

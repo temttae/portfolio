@@ -2,17 +2,25 @@
 import "../styles/card.scss";
 
 interface Props {
-  href: string;
-  title: string;
-  description: string;
-  image_src?: string;
+  work: {
+    title: string;
+    description: string;
+    year: string;
+    category: string;
+    url: string;
+    wip: boolean;
+    card_img?: string;
+  };
 }
-const { href, title, description, image_src } = Astro.props;
+const {
+  work: { title, description, year, category, url, wip, card_img },
+} = Astro.props;
 ---
 
-<a href={href}>
+<a href={url}>
   <div class="card-container">
-    <img src={image_src} />
+    <img src={card_img} />
+    {wip && <span class="card-tag">a work in progress</span>}
     <div class="card-title">
       <span class="card-title-text">{title}</span>
       <span>{description}</span>
