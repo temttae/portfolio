@@ -50,3 +50,10 @@
   height: 18.5px;
   width: auto;
 }
+
+code {
+  background-color: base.$highlight-bg;
+  color: base.$highlight-text;
+  padding: 4px;
+  border-radius: 2px;
+}

@@ -104,3 +104,9 @@ select {
     color: inherit;
   }
 }
+
+.green-link {
+  &:hover {
+    color: base.$highlight-text;
+  }
+}
