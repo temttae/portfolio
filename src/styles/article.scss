@@ -25,6 +25,13 @@
   flex: 1;
   margin-top: -25px;
 
+  code {
+    background-color: var(--highlight-bg);
+    color: var(--highlight-text);
+    padding: 4px;
+    border-radius: 2px;
+  }
+
   p,
   a {
     font-size: 12.5px;
@@ -38,9 +45,9 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 4px;
-  color: base.$gray-content;
+  color: var(--gray-content);
   padding-bottom: 10px;
-  border-bottom: 1px solid base.$gray-content;
+  border-bottom: 1px solid var(--gray-content);
 }
 
 .title-text {
@@ -51,11 +58,4 @@
 .github-logo {
   height: 18.5px;
   width: auto;
-}
-
-code {
-  background-color: base.$highlight-bg;
-  color: base.$highlight-text;
-  padding: 4px;
-  border-radius: 2px;
 }

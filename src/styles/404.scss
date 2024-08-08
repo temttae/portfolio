@@ -12,10 +12,10 @@ div {
 
 a {
   text-decoration: none;
-  color: base.$gray-content-3;
+  color: var(--gray-content-3);
 
   &:visited {
-    color: base.$gray-content-3;
+    color: var(--gray-content-3);
   }
 
   &:hover {
@@ -31,6 +31,6 @@ a {
 }
 
 .message {
-  background-color: base.$gray-content;
+  background-color: var(--gray-content);
   padding: 10px;
 }

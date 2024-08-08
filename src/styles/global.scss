@@ -19,8 +19,22 @@ br,
 strong,
 span {
   &::selection {
-    color: base.$highlight-text;
-    background-color: base.$highlight-bg;
+    color: var(--highlight-text);
+    background-color: var(--highlight-bg);
+  }
+}
+
+/* set color theme */
+:root {
+  color: var(--gray-content);
+  
+  @include base.generate-css-variables(base.$light-mode);
+  background-color: var(--bg);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include base.generate-css-variables(base.$dark-mode);
   }
 }
 
@@ -83,7 +97,7 @@ select {
   text-decoration: none;
 
   &:visited {
-    color: base.$gray-content;
+    color: var(--gray-content);
   }
 
   &:hover {
@@ -94,7 +108,7 @@ select {
 .wavy-link {
   text-decoration: underline;
   text-decoration-style: wavy;
-  text-decoration-color: base.$gray-content-3;
+  text-decoration-color: var(--gray-content-3);
 
   &:hover {
     text-decoration-style: wavy;
@@ -107,6 +121,6 @@ select {
 
 .green-link {
   &:hover {
-    color: base.$highlight-text;
+    color: var(--highlight-text);
   }
 }

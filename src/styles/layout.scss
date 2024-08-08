@@ -17,10 +17,10 @@ div {
 
 a {
   text-decoration: none;
-  color: base.$gray-content;
+  color: var(--gray-content);
 
   &:visited {
-    color: base.$gray-content;
+    color: var(--gray-content);
   }
 
   &:hover {

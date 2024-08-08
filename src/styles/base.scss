@@ -1,8 +1,26 @@
-/* colors: light mode */
-$bg: #FFFFFF;
-$gray-bg: #F7F7F7;
-$gray-content: #333333;
-$gray-content-2: #696969;
-$gray-content-3: #999999;
-$highlight-bg: #BBD5B6;
-$highlight-text: #417E30;
+/* colors */
+$light-mode: (
+  bg: #FFFFFF,
+  gray-bg: #F7F7F7,
+  gray-content: #333333,
+  gray-content-2: #696969,
+  gray-content-3: #999999,
+  highlight-bg: #BBD5B6,
+  highlight-text: #417E30
+);
+
+$dark-mode: (
+  bg: #000000,
+  gray-bg: #1A1A1A,
+  gray-content: #E5E5E5,
+  gray-content-2: #B2B2B2,
+  gray-content-3: #696969,
+  highlight-bg: #324B2D,
+  highlight-text: #A2D48D,
+);
+
+@mixin generate-css-variables($map) {
+  @each $key, $value in $map {
+    --#{$key}: #{$value};
+  }
+}
