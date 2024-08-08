@@ -1,33 +1,29 @@
-# Astro Starter Kit: Minimal
+# temttae
 
-```sh
-npm create astro@latest -- --template minimal
-```
+<!-- A personal site, live at [temttae.dev](). -->
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Built with [Astro](https://astro.build/) and typeset in [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono).
 
 ## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
 
 ```text
 /
 ├── public/
+│   └── favicon.svg
 ├── src/
 │   └── pages/
 │       └── index.astro
+│       └── works/
+│           └── *.md            (for work details)
+│       └── about.astro
+│       └── 404.astro
+│   └── components/             (React components + Astro islands)
+│   └── data/                   (static data of works)
+│   └── assets/                 (images)
+│   └── layouts/                (for articles)
+│   └── styles/
 └── package.json
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
 
 ## 🧞 Commands
 
@@ -42,6 +38,10 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## Resources
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+1. [https://www.are.na/](https://www.are.na/)
+2. [https://www.yihui.work/](https://www.yihui.work/)
+3. [https://weekendlabs.net/](https://weekendlabs.net/)
+4. [Astro Crash Course in 20 Minutes!](https://www.youtube.com/watch?v=zrPVTf761OI)
+5. [Sass in 100 Seconds](https://www.youtube.com/watch?v=akDIJa0AP5c)
